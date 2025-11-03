@@ -1,0 +1,61 @@
+{
+  "name": "@nappr/eslint-config",
+  "version": "0.1.0",
+  "description": "Configuration ESLint partagée pour les projets Nappr",
+  "author": "sixertoy <sixertoy.github@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./base": "./src/configs/base.config.js",
+    "./typescript": "./src/configs/typescript.config.js",
+    "./jsx-a11y": "./src/configs/jsx-a11y.config.js",
+    "./imports": "./src/configs/imports.config.js",
+    "./formatting": "./src/configs/formatting.config.js",
+    "./sorting": "./src/configs/sorting.config.js",
+    "./json": "./src/configs/json.config.js",
+    "./comments": "./src/configs/comments.config.js",
+    "./standard": "./src/configs/standard.config.js",
+    "./react": "./src/configs/react.config.js",
+    "./node": "./src/configs/node.config.js",
+    "./recommended/react": "./src/recommended/react.recommended.js",
+    "./recommended/node": "./src/recommended/node.recommended.js",
+    "./recommended/vitest": "./src/recommended/vitest.recommended.js",
+    "./recommended/jest": "./src/recommended/jest.recommended.js"
+  },
+  "files": [
+    "src"
+  ],
+  "dependencies": {
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
+    "@eslint/js": "^9.17.0",
+    "@eslint/json": "^0.13.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jest": "^28.11.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-sort-destructure-keys": "^2.0.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "globals": "^15.14.0",
+    "typescript-eslint": "^8.18.1"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.0.0",
+    "prettier": ">=3.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2"
+  },
+  "scripts": {
+    "format": "prettier --check .",
+    "format:fix": "prettier --write ."
+  }
+}
