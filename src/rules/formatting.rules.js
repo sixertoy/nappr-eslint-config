@@ -3,5 +3,4 @@
  */
 export const formattingRules = {
   'prettier/prettier': 'error',
-  'multiline-ternary': ['error', 'always'],
 };

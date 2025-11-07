@@ -67,8 +67,6 @@ export const standardRules = {
   'no-multi-str': ['error'],
   'no-nested-ternary': ['error'],
   'no-new': ['error'],
-  'no-new-object': ['error'],
-  'no-new-symbol': ['error'],
   'no-new-wrappers': ['error'],
   'no-octal-escape': ['error'],
   'no-param-reassign': [
@@ -90,7 +88,6 @@ export const standardRules = {
       props: true,
     },
   ],
-  'no-path-concat': ['error'],
   'no-plusplus': ['error'],
   'no-promise-executor-return': ['error'],
   'no-proto': ['error'],

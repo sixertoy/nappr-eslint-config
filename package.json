@@ -8,16 +8,16 @@
   "main": "src/index.js",
   "exports": {
     ".": "./src/index.js",
-    "./base": "./src/configs/base.config.js",
-    "./typescript": "./src/configs/typescript.config.js",
-    "./jsx-a11y": "./src/configs/jsx-a11y.config.js",
-    "./imports": "./src/configs/imports.config.js",
-    "./formatting": "./src/configs/formatting.config.js",
-    "./stylistic": "./src/configs/stylistic.config.js",
-    "./sorting": "./src/configs/sorting.config.js",
-    "./json": "./src/configs/json.config.js",
-    "./comments": "./src/configs/comments.config.js",
-    "./standard": "./src/configs/standard.config.js",
+    "./base": "./src/setups/base.setups.js",
+    "./typescript": "./src/setups/typescript.setups.js",
+    "./jsx-a11y": "./src/setups/jsx-setups.config.js",
+    "./imports": "./src/setups/imports.setups.js",
+    "./formatting": "./src/setups/formatting.setups.js",
+    "./stylistic": "./src/setups/stylistic.setups.js",
+    "./sorting": "./src/setups/sorting.setups.js",
+    "./json": "./src/setups/json.setups.js",
+    "./comments": "./src/setups/comments.setups.js",
+    "./standard": "./src/setups/standard.setups.js",
     "./react": "./src/configs/react.config.js",
     "./node": "./src/configs/node.config.js",
     "./recommended/react": "./src/recommended/react.recommended.js",
@@ -52,10 +52,12 @@
     "prettier": ">=3.0.0"
   },
   "devDependencies": {
+    "@eslint/config-inspector": "^1.3.0",
     "prettier": "^3.4.2",
     "typescript": "^5.7.2"
   },
   "scripts": {
+    "inspect": "eslint-config-inspector",
     "format": "prettier --check .",
     "format:fix": "prettier --write ."
   }

@@ -5,10 +5,11 @@ import { jsxA11yRules } from '../rules/index.js';
 /**
  * Configuration JSX A11y pour l'accessibilité
  */
-export const jsxA11yConfig = [
+export const jsxA11ySetup = [
   {
-    files: ['**/*.{ts,tsx}'],
-    ignores: ['**/*.json', '**/*.d.ts'],
+    files: ['**/*.{jsx,tsx}'],
+    ignores: ['**/*.json'],
+    name: '@nappr/eslint-config/jsx-a11y-setup',
     plugins: {
       'jsx-a11y': jsxA11y,
     },

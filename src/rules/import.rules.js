@@ -2,10 +2,6 @@
  * Règles pour les imports avec tri automatique
  */
 export const importRules = {
-  'import/no-default-export': 'error',
-  'import/prefer-default-export': 'off',
-  'simple-import-sort/imports': 'error',
-  'simple-import-sort/exports': 'error',
   'import/extensions': [
     'error',
     'ignorePackages',
@@ -27,6 +23,7 @@ export const importRules = {
       maxDepth: '∞',
     },
   ],
+  'import/no-default-export': 'error',
   'import/no-duplicates': 'error',
   'import/no-dynamic-require': 'error',
   'import/no-import-module-exports': [
@@ -48,4 +45,7 @@ export const importRules = {
     },
   ],
   'import/no-webpack-loader-syntax': 'error',
+  'import/prefer-default-export': 'off',
+  'simple-import-sort/exports': 'error',
+  'simple-import-sort/imports': 'error',
 };

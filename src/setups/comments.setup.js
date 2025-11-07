@@ -5,10 +5,11 @@ import { commentsRules } from '../rules/index.js';
 /**
  * Configuration pour les commentaires ESLint
  */
-export const commentsConfig = [
+export const commentsSetup = [
   {
     files: ['**/*.{ts,tsx,js,jsx}'],
-    ignores: ['**/*.json', '**/*.d.ts'],
+    ignores: ['**/*.json'],
+    name: '@nappr/eslint-config/comments-setup',
     plugins: {
       '@eslint-community/eslint-comments': eslintComments,
     },

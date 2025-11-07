@@ -1,5 +1,4 @@
 import globals from 'globals';
-import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
 import { typescriptRules } from '../rules/index.js';
@@ -7,12 +6,14 @@ import { typescriptRules } from '../rules/index.js';
 /**
  * Configuration TypeScript avec règles strictes
  */
-export const typescriptConfig = [
-  ...tseslint.configs.recommended,
-  js.configs.recommended,
+export const typescriptSetup = [
+  // ...tseslint.configs.recommendedTypeChecked,
+  ...tseslint.configs.strictTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
   {
-    ignores: ['**/*.json', '**/*.d.ts'],
+    name: '@nappr/eslint-config/typescript-setup',
     files: ['**/*.{ts,tsx}'],
+    ignores: ['**/*.json'],
     linterOptions: {
       reportUnusedDisableDirectives: true,
     },
@@ -30,7 +31,15 @@ export const typescriptConfig = [
       },
     },
     rules: {
+      'no-unused-vars': 'off',
       ...typescriptRules,
     },
+  },
+  {
+    name: '@nappr/eslint-config/disabled-typescript-setup',
+    files: ['**/*.{js,jsx}'],
+    extends: [
+      tseslint.configs.disableTypeChecked,
+    ],
   },
 ];

@@ -7,7 +7,11 @@ export const stylisticRules = {
   '@stylistic/indent': ['error', 2, { SwitchCase: 1 }],
 
   // Guillemets
-  '@stylistic/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: 'always' }],
+  '@stylistic/quotes': [
+    'error',
+    'single',
+    { avoidEscape: true, allowTemplateLiterals: 'always' },
+  ],
 
   // Point-virgule
   '@stylistic/semi': ['error', 'always'],
@@ -17,7 +21,11 @@ export const stylisticRules = {
   '@stylistic/comma-spacing': ['error', { before: false, after: true }],
   '@stylistic/comma-style': ['error', 'last'],
   '@stylistic/key-spacing': ['error', { beforeColon: false, afterColon: true }],
-  '@stylistic/object-curly-spacing': ['error', 'always', { emptyObjects: 'never' }],
+  '@stylistic/object-curly-spacing': [
+    'error',
+    'always',
+    { emptyObjects: 'never' },
+  ],
   '@stylistic/array-bracket-spacing': ['error', 'never'],
   '@stylistic/space-before-blocks': ['error', 'always'],
   '@stylistic/space-before-function-paren': [
@@ -44,7 +52,11 @@ export const stylisticRules = {
   '@stylistic/arrow-spacing': ['error', { before: true, after: true }],
 
   // Opérateurs
-  '@stylistic/operator-linebreak': ['error', 'after', { overrides: { '?': 'before', ':': 'before' } }],
+  '@stylistic/operator-linebreak': [
+    'error',
+    'after',
+    { overrides: { '?': 'before', ':': 'before' } },
+  ],
 
   // Autres
   '@stylistic/no-multi-spaces': 'error',

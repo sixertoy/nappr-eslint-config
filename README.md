@@ -7,13 +7,11 @@ Configuration ESLint partagée et réutilisable pour les projets Nappr. Ce packa
 - [@nappr/eslint-config](#nappreslint-config)
   - [📋 Table des matières](#-table-des-matières)
   - [🔧 Installation](#-installation)
-    - [Dans un projet du monorepo Nappr](#dans-un-projet-du-monorepo-nappr)
-    - [Dans un projet externe](#dans-un-projet-externe)
   - [📦 Configurations disponibles](#-configurations-disponibles)
     - [Configurations complètes](#configurations-complètes)
     - [Configurations modulaires](#configurations-modulaires)
   - [🚀 Utilisation](#-utilisation)
-    - [Configuration React complète](#configuration-react-complète)
+    - [Configuration React](#configuration-react)
     - [Configuration Node.js](#configuration-nodejs)
     - [Configuration modulaire personnalisée](#configuration-modulaire-personnalisée)
     - [Personnalisation avancée](#personnalisation-avancée)
@@ -26,43 +24,21 @@ Configuration ESLint partagée et réutilisable pour les projets Nappr. Ce packa
     - [Sorting](#sorting)
     - [JSON](#json)
     - [ESLint Standard](#eslint-standard)
-  - [🔌 Dépendances](#-dépendances)
-    - [Dépendances principales](#dépendances-principales)
-    - [Peer dependencies](#peer-dependencies)
-  - [🎯 Exemples complets](#-exemples-complets)
-    - [Projet React avec TypeScript](#projet-react-avec-typescript)
-    - [Projet Node.js avec tests](#projet-nodejs-avec-tests)
-    - [Configuration minimale TypeScript uniquement](#configuration-minimale-typescript-uniquement)
   - [⚙️ Configuration requise](#️-configuration-requise)
-  - [🔄 Migration depuis ESLint 8](#-migration-depuis-eslint-8)
   - [📚 Ressources](#-ressources)
-  - [🤝 Contribution](#-contribution)
-  - [📄 Licence](#-licence)
 
 ## 🔧 Installation
-
-### Dans un projet du monorepo Nappr
-
-```bash
-# Depuis la racine du monorepo
-yarn workspace @nappr/eslint-config install
-```
-
-### Dans un projet externe
 
 ```bash
 # Via yarn/npm (si le package est publié)
 yarn add -D @nappr/eslint-config
-
-# Ou en tant que dépendance locale
-yarn add -D file:../path/to/nappr/eslint-config
 ```
 
 ## 📦 Configurations disponibles
 
 ### Configurations complètes
 
-1. **`reactConfig`** (export par défaut) - Configuration complète pour projets React avec toutes les règles
+1. **`reactConfig`** - Configuration complète pour projets React avec toutes les règles
 2. **`nodeConfig`** - Configuration complète pour projets Node.js avec support des tests Vitest
 
 ### Configurations modulaires
@@ -82,9 +58,7 @@ Vous pouvez combiner les modules selon vos besoins :
 
 ## 🚀 Utilisation
 
-### Configuration React complète
-
-Pour un projet React, utilisez la configuration complète :
+### Configuration React
 
 ```javascript
 // eslint.config.js
@@ -99,8 +73,6 @@ export default [
 ```
 
 ### Configuration Node.js
-
-Pour un projet Node.js (inclut le support des tests Vitest) :
 
 ```javascript
 // eslint.config.js
@@ -135,7 +107,7 @@ export default [
   ...importsConfig,
   ...formattingConfig,
   {
-    ignores: ['dist/**', 'node_modules/**'],
+    ignores: ['dist/**', 'node_modules/**', 'coverage/**', '*.config.js'],
   },
 ];
 ```
@@ -156,18 +128,10 @@ export default tseslint.config(
       // Surcharger des règles
       'no-console': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
-      
-      // Ajouter des règles personnalisées
-      'custom-rule': 'error',
     },
   },
   {
-    ignores: [
-      'dist/**',
-      'node_modules/**',
-      'coverage/**',
-      '*.config.js',
-    ],
+    ignores: ['dist/**', 'node_modules/**', 'coverage/**', '*.config.js'],
   },
 );
 ```
@@ -252,98 +216,6 @@ Plus de 60 règles ESLint standard strictes incluant :
 - ✅ **Prefer template** : Utilisation des template literals
 - ✅ Et beaucoup d'autres règles de qualité de code
 
-## 🔌 Dépendances
-
-### Dépendances principales
-
-- `@eslint/js` - Configuration JavaScript de base
-- `typescript-eslint` - Support TypeScript pour ESLint
-- `eslint-plugin-react` - Règles React
-- `eslint-plugin-react-hooks` - Règles pour les hooks React
-- `eslint-plugin-react-refresh` - Support React Fast Refresh
-- `eslint-plugin-jsx-a11y` - Règles d'accessibilité
-- `eslint-plugin-import` - Règles pour l'organisation des imports
-- `eslint-plugin-simple-import-sort` - Tri automatique des imports
-- `eslint-plugin-sort-keys-fix` - Tri des clés d'objets
-- `eslint-plugin-sort-destructure-keys` - Tri des clés en destructuring
-- `eslint-plugin-prettier` - Intégration Prettier
-- `eslint-config-prettier` - Désactive les règles conflictuelles avec Prettier
-- `@eslint-community/eslint-plugin-eslint-comments` - Gestion des commentaires ESLint
-- `@eslint/json` - Support JSON
-- `globals` - Définitions de globals pour différents environnements
-
-### Peer dependencies
-
-- `eslint >= 9.0.0` - ESLint 9+ requis (Flat Config)
-- `prettier >= 3.0.0` - Prettier recommandé
-
-## 🎯 Exemples complets
-
-### Projet React avec TypeScript
-
-```javascript
-// eslint.config.js
-import reactConfig from '@nappr/eslint-config';
-
-export default [
-  ...reactConfig,
-  {
-    ignores: [
-      'dist/**',
-      'build/**',
-      'node_modules/**',
-      'public/**',
-      'coverage/**',
-      '*.config.js',
-      '*.config.mjs',
-    ],
-  },
-];
-```
-
-### Projet Node.js avec tests
-
-```javascript
-// eslint.config.js
-import { nodeConfig } from '@nappr/eslint-config';
-
-export default [
-  ...nodeConfig,
-  {
-    ignores: [
-      'dist/**',
-      'node_modules/**',
-      'coverage/**',
-      '*.config.js',
-      '*.config.mjs',
-      '*.config.ts',
-    ],
-  },
-];
-```
-
-### Configuration minimale TypeScript uniquement
-
-```javascript
-// eslint.config.js
-import {
-  baseConfig,
-  typescriptConfig,
-  importsConfig,
-  formattingConfig,
-} from '@nappr/eslint-config';
-
-export default [
-  ...baseConfig,
-  ...typescriptConfig,
-  ...importsConfig,
-  ...formattingConfig,
-  {
-    ignores: ['dist/**', 'node_modules/**'],
-  },
-];
-```
-
 ## ⚙️ Configuration requise
 
 - **Node.js** : >= 18.0.0
@@ -351,29 +223,9 @@ export default [
 - **TypeScript** : Recommandé pour une meilleure expérience
 - **Prettier** : >= 3.0.0 (recommandé)
 
-## 🔄 Migration depuis ESLint 8
-
-Ce package utilise le nouveau format **Flat Config** d'ESLint 9+. Si vous migrez depuis ESLint 8 :
-
-1. Mettez à jour ESLint vers la version 9+
-2. Renommez `.eslintrc.*` en `eslint.config.js`
-3. Utilisez le format Flat Config comme montré dans les exemples
-
 ## 📚 Ressources
 
 - [ESLint Flat Config](https://eslint.org/docs/latest/use/configure/configuration-files-new)
 - [TypeScript ESLint](https://typescript-eslint.io/)
 - [Prettier](https://prettier.io/)
 - [React ESLint Plugin](https://github.com/jsx-eslint/eslint-plugin-react)
-
-## 🤝 Contribution
-
-Ce package fait partie du monorepo Nappr. Pour contribuer :
-
-1. Faites vos modifications dans ce package
-2. Testez avec `yarn format` et `yarn lint` (si disponibles)
-3. Créez une PR
-
-## 📄 Licence
-
-MIT
