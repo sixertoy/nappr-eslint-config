@@ -9,6 +9,7 @@ import { typescriptConfig } from './typescript.config.js';
 import { jsxA11yConfig } from './jsx-a11y.config.js';
 import { importsConfig } from './imports.config.js';
 import { formattingConfig } from './formatting.config.js';
+import { stylisticConfig } from './stylistic.config.js';
 import { sortingConfig } from './sorting.config.js';
 import { jsonConfig } from './json.config.js';
 import { commentsConfig } from './comments.config.js';
@@ -43,6 +44,7 @@ export const reactConfig = [
   },
   ...jsxA11yConfig,
   ...importsConfig,
+  ...stylisticConfig,
   ...formattingConfig,
   ...sortingConfig,
   ...jsonConfig,

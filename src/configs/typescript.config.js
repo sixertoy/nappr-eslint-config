@@ -11,7 +11,7 @@ export const typescriptConfig = [
   ...tseslint.configs.recommended,
   js.configs.recommended,
   {
-    ignores: ['**/*.json'],
+    ignores: ['**/*.json', '**/*.d.ts'],
     files: ['**/*.{ts,tsx}'],
     linterOptions: {
       reportUnusedDisableDirectives: true,
