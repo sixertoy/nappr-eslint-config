@@ -5,6 +5,7 @@ export const baseConfig = [
       'node_modules',
       'build',
       'coverage',
+      '*.d.ts',
       '*.config.js',
       '*.config.json',
       'tsconfig*.json',

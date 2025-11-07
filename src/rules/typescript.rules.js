@@ -91,7 +91,7 @@ export const typescriptRules = {
       allowBoolean: false,
       allowNever: false,
       allowNullish: false,
-      allowNumber: false,
+      allowNumber: true,
       allowRegExp: false,
     },
   ],

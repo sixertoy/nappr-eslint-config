@@ -16,7 +16,6 @@ Configuration ESLint partagée et réutilisable pour les projets Nappr. Ce packa
     - [Configuration React complète](#configuration-react-complète)
     - [Configuration Node.js](#configuration-nodejs)
     - [Configuration modulaire personnalisée](#configuration-modulaire-personnalisée)
-    - [Import d'une configuration spécifique](#import-dune-configuration-spécifique)
     - [Personnalisation avancée](#personnalisation-avancée)
   - [📝 Règles incluses](#-règles-incluses)
     - [TypeScript](#typescript)
@@ -89,7 +88,7 @@ Pour un projet React, utilisez la configuration complète :
 
 ```javascript
 // eslint.config.js
-import reactConfig from '@nappr/eslint-config';
+import { reactConfig } from '@nappr/eslint-config';
 
 export default [
   ...reactConfig,
@@ -137,22 +136,6 @@ export default [
   ...formattingConfig,
   {
     ignores: ['dist/**', 'node_modules/**'],
-  },
-];
-```
-
-### Import d'une configuration spécifique
-
-Vous pouvez également importer directement une configuration spécifique :
-
-```javascript
-// eslint.config.js
-import reactConfig from '@nappr/eslint-config/react-full';
-
-export default [
-  ...reactConfig,
-  {
-    ignores: ['dist/**'],
   },
 ];
 ```
