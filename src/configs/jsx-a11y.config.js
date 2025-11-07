@@ -8,7 +8,7 @@ import { jsxA11yRules } from '../rules/index.js';
 export const jsxA11yConfig = [
   {
     files: ['**/*.{ts,tsx}'],
-    ignores: ['**/*.json'],
+    ignores: ['**/*.json', '**/*.d.ts'],
     plugins: {
       'jsx-a11y': jsxA11y,
     },

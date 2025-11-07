@@ -7,7 +7,7 @@ export const stylisticRules = {
   '@stylistic/indent': ['error', 2, { SwitchCase: 1 }],
 
   // Guillemets
-  '@stylistic/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
+  '@stylistic/quotes': ['error', 'single', { avoidEscape: true, allowTemplateLiterals: 'always' }],
 
   // Point-virgule
   '@stylistic/semi': ['error', 'always'],
@@ -50,7 +50,7 @@ export const stylisticRules = {
   '@stylistic/no-multi-spaces': 'error',
   '@stylistic/block-spacing': ['error', 'always'],
   '@stylistic/computed-property-spacing': ['error', 'never'],
-  '@stylistic/func-call-spacing': ['error', 'never'],
+  '@stylistic/function-call-spacing': ['error', 'never'],
   '@stylistic/implicit-arrow-linebreak': ['error', 'beside'],
   '@stylistic/max-len': [
     'error',

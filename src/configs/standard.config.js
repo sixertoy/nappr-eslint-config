@@ -6,7 +6,7 @@ import { standardRules } from '../rules/index.js';
 export const standardConfig = [
   {
     files: ['**/*.{ts,tsx}'],
-    ignores: ['**/*.json'],
+    ignores: ['**/*.json', '**/*.d.ts'],
     rules: {
       ...standardRules,
     },

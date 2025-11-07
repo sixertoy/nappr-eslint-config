@@ -9,7 +9,7 @@ import { formattingRules } from '../rules/index.js';
 export const formattingConfig = [
   {
     files: ['**/*.{ts,tsx}'],
-    ignores: ['**/*.json'],
+    ignores: ['**/*.json', '**/*.d.ts'],
     plugins: {
       prettier: prettier,
     },

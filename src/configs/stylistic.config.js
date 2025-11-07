@@ -9,7 +9,7 @@ import { stylisticRules } from '../rules/index.js';
 export const stylisticConfig = [
   {
     files: ['**/*.{ts,tsx,js,jsx}'],
-    ignores: ['**/*.json'],
+    ignores: ['**/*.json', '**/*.d.ts'],
     plugins: {
       '@stylistic': stylistic,
     },

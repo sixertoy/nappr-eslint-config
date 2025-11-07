@@ -11,6 +11,7 @@ export const baseConfig = [
       'package.json',
       'package-lock.json',
       'yarn.lock',
+      '**/*.d.ts',
     ],
   },
 ];
