@@ -17,7 +17,7 @@ export const stylisticRules = {
   '@stylistic/comma-spacing': ['error', { before: false, after: true }],
   '@stylistic/comma-style': ['error', 'last'],
   '@stylistic/key-spacing': ['error', { beforeColon: false, afterColon: true }],
-  '@stylistic/object-curly-spacing': ['error', 'always'],
+  '@stylistic/object-curly-spacing': ['error', 'always', { emptyObjects: 'never' }],
   '@stylistic/array-bracket-spacing': ['error', 'never'],
   '@stylistic/space-before-blocks': ['error', 'always'],
   '@stylistic/space-before-function-paren': [
