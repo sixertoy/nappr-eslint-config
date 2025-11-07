@@ -25,6 +25,7 @@ export const nodeConfig = [
   ...standardConfig,
   {
     files: ['**/*.{ts,tsx}'],
+    ignores: ['**/*.json'],
     languageOptions: {
       globals: {
         ...globals.node,

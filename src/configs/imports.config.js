@@ -9,7 +9,7 @@ import { importRules } from '../rules/index.js';
 export const importsConfig = [
   {
     files: ['**/*.{ts,tsx}'],
-    ignores: ['**/*.config.{js,ts}', '**/*.recommended.{js,ts}', '**/eslint.config.js'],
+    ignores: ['**/*.json', '**/*.config.{js,ts}', '**/*.recommended.{js,ts}', '**/eslint.config.js'],
     plugins: {
       import: importPlugin,
       'simple-import-sort': simpleImportSort,
@@ -22,7 +22,10 @@ export const importsConfig = [
         node: {
           extensions: ['.js', '.jsx', '.ts', '.tsx'],
         },
-        typescript: true,
+        typescript: {
+          alwaysTryTypes: true,
+          project: './tsconfig.json',
+        },
       },
     },
   },

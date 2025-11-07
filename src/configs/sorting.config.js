@@ -9,6 +9,7 @@ import { sortingRules } from '../rules/index.js';
 export const sortingConfig = [
   {
     files: ['**/*.{ts,tsx}'],
+    ignores: ['**/*.json'],
     plugins: {
       'sort-destructure-keys': sortDestructureKeys,
       'sort-keys-fix': sortKeysFix,

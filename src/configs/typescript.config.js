@@ -10,14 +10,22 @@ export const typescriptConfig = [
   ...tseslint.configs.recommended,
   js.configs.recommended,
   {
+    ignores: ['**/*.json'],
     files: ['**/*.{ts,tsx}'],
+    linterOptions: {
+      reportUnusedDisableDirectives: true,
+    },
     languageOptions: {
       ecmaVersion: 2020,
+      globals: {
+        ...globals.node,
+        ...globals.es2020,
+        ...globals.browser,
+        ...globals.serviceworker,
+      },
       parserOptions: {
-        project: true,
-        ecmaFeatures: {
-          jsx: true,
-        },
+        ecmaVersion: 2020,
+        projectService: true,
       },
     },
     rules: {

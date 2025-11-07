@@ -1,8 +1,16 @@
-/**
- * Configuration de base - définitions des fichiers à ignorer
- */
-export const baseConfig = [
+export default [
   {
-    ignores: ['dist', 'node_modules', 'build', 'coverage', '*.config.js', '*.recommended.js'],
+    ignores: [
+      'dist',
+      'node_modules',
+      'build',
+      'coverage',
+      '*.config.js',
+      '*.config.json',
+      'tsconfig*.json',
+      'package.json',
+      'package-lock.json',
+      'yarn.lock',
+    ],
   },
 ];

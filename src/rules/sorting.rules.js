@@ -7,7 +7,6 @@ export const sortingRules = {
     'error',
     {
       caseSensitive: false,
-      natural: true,
     },
   ],
 };

@@ -23,6 +23,7 @@ export const reactConfig = [
   ...typescriptConfig,
   {
     files: ['**/*.{ts,tsx}'],
+    ignores: ['**/*.json'],
     settings: {
       react: {
         version: 'detect',

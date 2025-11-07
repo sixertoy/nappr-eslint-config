@@ -6,14 +6,10 @@ import { jsonRules } from '../rules/index.js';
  * Configuration pour les fichiers JSON
  */
 export const jsonConfig = [
+  json.configs.recommended,
   {
     files: ['**/*.json'],
-    ignores: ['package-lock.json'],
-    plugins: {
-      json,
-    },
-    language: 'json/json',
-    extends: ['json/recommended'],
+    ignores: ['package-lock.json', 'yarn.lock'],
     rules: {
       ...jsonRules,
     },
