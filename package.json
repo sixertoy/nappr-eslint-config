@@ -1,11 +1,14 @@
 {
   "name": "@nappr/eslint-config",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "Configuration ESLint partagée pour les projets Nappr",
   "author": "sixertoy <sixertoy.github@gmail.com>",
   "license": "MIT",
   "type": "module",
   "main": "src/index.js",
+  "bin": {
+    "nappr-eslint-config": "./bin/cli.js"
+  },
   "exports": {
     ".": "./src/index.js",
     "./base": "./src/setups/base.setups.js",
@@ -26,7 +29,8 @@
     "./recommended/jest": "./src/recommended/jest.recommended.js"
   },
   "files": [
-    "src"
+    "src",
+    "bin"
   ],
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
