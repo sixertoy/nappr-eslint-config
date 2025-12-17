@@ -38,19 +38,13 @@ The package includes a CLI command to quickly access help and information:
 
 ```bash
 # Display help
-yarn @nappr/eslint-config --help
-
-# Or simply
-yarn @nappr/eslint-config
+yarn nappr-eslint-config
 ```
 
 The CLI displays:
 - Available configurations (reactConfig, nodeConfig)
-- Modular modules you can use
 - Usage examples
 - Link to full documentation
-
-This is especially useful when you need a quick reference without opening the README.
 
 ## 🚀 Quick Start
 
@@ -104,7 +98,7 @@ You can combine modules according to your needs:
 9. **`commentsConfig`** - ESLint comments management
 10. **`standardConfig`** - Strict ESLint standard rules
 
-For detailed usage examples and advanced customization, see [AGENT.md](./AGENT.md).
+For detailed usage examples and advanced customization, see [AGENTS.md](./AGENTS.md).
 
 ## 📝 Included Rules
 
@@ -199,4 +193,4 @@ Import organization rules:
 - [TypeScript ESLint](https://typescript-eslint.io/)
 - [Prettier](https://prettier.io/)
 - [React ESLint Plugin](https://github.com/jsx-eslint/eslint-plugin-react)
-- [AGENT.md](./AGENT.md) - Detailed reference for AI agents and advanced usage
+- [AGENTS.md](./AGENTS.md) - Detailed reference for AI agents and advanced usage

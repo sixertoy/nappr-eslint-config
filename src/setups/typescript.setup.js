@@ -13,7 +13,7 @@ export const typescriptSetup = [
   {
     name: '@nappr/eslint-config/typescript-setup',
     files: ['**/*.{ts,tsx}'],
-    ignores: ['**/*.json'],
+    ignores: ['**/*.{json,jsonc}'],
     linterOptions: {
       reportUnusedDisableDirectives: true,
     },
@@ -36,10 +36,7 @@ export const typescriptSetup = [
     },
   },
   {
-    name: '@nappr/eslint-config/disabled-typescript-setup',
-    files: ['**/*.{js,jsx}'],
-    extends: [
-      tseslint.configs.disableTypeChecked,
-    ],
+    ...tseslint.configs.disableTypeChecked,
+    files: ['*.{js,jsx}'],
   },
 ];

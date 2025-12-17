@@ -30,7 +30,7 @@ export const standardSetup = [
   importPlugin.flatConfigs.recommended,
   {
     files: ['**/*.{ts,tsx,js,jsx}'],
-    ignores: ['**/*.json'],
+    ignores: ['**/*.{json,jsonc}'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {

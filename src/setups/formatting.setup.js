@@ -10,7 +10,7 @@ import { formattingRules, stylisticRules } from '../rules/index.js';
 export const formattingSetup = [
   {
     files: ['**/*.{ts,tsx,js,jsx}'],
-    ignores: ['**/*.json'],
+    ignores: ['**/*.{json,jsonc}'],
     name: '@nappr/eslint-config/formatting-setup',
     plugins: {
       '@stylistic': stylistic,

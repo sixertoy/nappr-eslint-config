@@ -1,9 +1,13 @@
 {
   "name": "@nappr/eslint-config",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Configuration ESLint partagée pour les projets Nappr",
   "author": "sixertoy <sixertoy.github@gmail.com>",
+  "homepage": "https://github.com/sixertoy/nappr-eslint-config",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "main": "src/index.js",
   "bin": {
@@ -11,31 +15,18 @@
   },
   "exports": {
     ".": "./src/index.js",
-    "./base": "./src/setups/base.setups.js",
-    "./typescript": "./src/setups/typescript.setups.js",
-    "./jsx-a11y": "./src/setups/jsx-setups.config.js",
-    "./imports": "./src/setups/imports.setups.js",
-    "./formatting": "./src/setups/formatting.setups.js",
-    "./stylistic": "./src/setups/stylistic.setups.js",
-    "./sorting": "./src/setups/sorting.setups.js",
-    "./json": "./src/setups/json.setups.js",
-    "./comments": "./src/setups/comments.setups.js",
-    "./standard": "./src/setups/standard.setups.js",
-    "./react": "./src/configs/react.config.js",
     "./node": "./src/configs/node.config.js",
-    "./recommended/react": "./src/recommended/react.recommended.js",
-    "./recommended/node": "./src/recommended/node.recommended.js",
-    "./recommended/vitest": "./src/recommended/vitest.recommended.js",
-    "./recommended/jest": "./src/recommended/jest.recommended.js"
+    "./react": "./src/configs/react.config.js"
   },
   "files": [
     "src",
     "bin"
   ],
-  "dependencies": {
+  "devDependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
+    "@eslint/config-inspector": "^1.3.0",
     "@eslint/js": "^9.17.0",
-    "@eslint/json": "^0.13.2",
+    "@eslint/json": "^0.14.0",
     "@stylistic/eslint-plugin": "^5.5.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.31.0",
@@ -49,16 +40,14 @@
     "eslint-plugin-sort-destructure-keys": "^2.0.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.1"
   },
   "peerDependencies": {
     "eslint": ">=9.0.0",
-    "prettier": ">=3.0.0"
-  },
-  "devDependencies": {
-    "@eslint/config-inspector": "^1.3.0",
-    "prettier": "^3.4.2",
-    "typescript": "^5.7.2"
+    "prettier": ">=3.0.0",
+    "@stylistic/eslint-plugin": "^5.5.0"
   },
   "scripts": {
     "inspect": "eslint-config-inspector",

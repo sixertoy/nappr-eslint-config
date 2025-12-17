@@ -53,19 +53,19 @@ export const typescriptRules = {
       enforceForJSX: false,
     },
   ],
+  '@typescript-eslint/no-unused-vars': [
+    'warn',
+    {
+      argsIgnorePattern: '^_',
+      varsIgnorePattern: '^_',
+    },
+  ],
   '@typescript-eslint/no-use-before-define': [
     'error',
     {
       classes: true,
       functions: true,
       variables: true,
-    },
-  ],
-  '@typescript-eslint/no-unused-vars': [
-    'warn',
-    {
-      argsIgnorePattern: '^_',
-      varsIgnorePattern: '^_',
     },
   ],
   '@typescript-eslint/only-throw-error': ['error'],

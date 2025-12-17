@@ -8,7 +8,7 @@ import { commentsRules } from '../rules/index.js';
 export const commentsSetup = [
   {
     files: ['**/*.{ts,tsx,js,jsx}'],
-    ignores: ['**/*.json'],
+    ignores: ['**/*.{json,jsonc}'],
     name: '@nappr/eslint-config/comments-setup',
     plugins: {
       '@eslint-community/eslint-comments': eslintComments,

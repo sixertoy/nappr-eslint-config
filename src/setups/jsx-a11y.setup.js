@@ -8,7 +8,7 @@ import { jsxA11yRules } from '../rules/index.js';
 export const jsxA11ySetup = [
   {
     files: ['**/*.{jsx,tsx}'],
-    ignores: ['**/*.json'],
+    ignores: ['**/*.{json,jsonc}'],
     name: '@nappr/eslint-config/jsx-a11y-setup',
     plugins: {
       'jsx-a11y': jsxA11y,

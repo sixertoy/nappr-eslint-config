@@ -1,4 +1,5 @@
 import json from '@eslint/json';
+import tseslint from 'typescript-eslint';
 
 import { jsonRules } from '../rules/index.js';
 
@@ -7,11 +8,15 @@ import { jsonRules } from '../rules/index.js';
  */
 export const jsonSetup = [
   {
+    ...tseslint.configs.disableTypeChecked,
+    files: ['**/*.{json,jsonc}'],
+  },
+  {
     name: '@eslint/json/recommended-config',
     ...json.configs.recommended,
   },
   {
-    files: ['**/*.json'],
+    files: ['**/*.{json,jsonc}'],
     ignores: ['package-lock.json', 'yarn.lock'],
     name: '@nappr/eslint-config/json-setup',
     rules: {

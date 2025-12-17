@@ -11,7 +11,7 @@ import { reactRules } from '../rules/index.js';
 export const reactSetup = [
   {
     files: ['**/*.{ts,tsx}'],
-    ignores: ['**/*.json'],
+    ignores: ['**/*.{json,jsonc}'],
     languageOptions: {
       globals: {
         ...globals.browser,
