@@ -1,6 +1,6 @@
 {
   "name": "@nappr/eslint-config",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Configuration ESLint partagée pour les projets Nappr",
   "author": "sixertoy <sixertoy.github@gmail.com>",
   "homepage": "https://github.com/sixertoy/nappr-eslint-config",

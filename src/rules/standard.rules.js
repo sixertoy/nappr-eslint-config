@@ -33,6 +33,14 @@ export const standardRules = {
     },
   ],
   'guard-for-in': ['error'],
+  'id-length': [
+    'error',
+    {
+      exceptions: ['_'],
+      min: 2,
+      properties: 'never',
+    },
+  ],
   'no-await-in-loop': ['error'],
   'no-bitwise': ['error'],
   'no-caller': ['error'],
